@@ -1,0 +1,431 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <script language="JavaScript">
+
+        function bs(){
+
+               document.getElementById('normsprite').className='bigsprite';}
+
+       function f1(id){
+		   switch(id)
+		   {
+               case 'smileySprite1':  document.getElementById(id).className='show1';
+                                   break;
+                        
+case 'smileySprite2':  document.getElementById(id).className='show1';
+                                   break;
+
+case 'smileySprite3':  document.getElementById(id).className='show1';
+                                   break;
+
+case 'smileySprite4':  document.getElementById(id).className='show1';
+                                   break;
+
+case 'smileySprite5':  document.getElementById(id).className='show1';
+                                   break;
+		   }
+  }
+	  
+        function setVisibility(id, visibility, c) {
+
+            switch(id)
+            {
+                case 'contactD1':
+                    document.getElementById(id).style.display = visibility;
+                       document.getElementById(c).style.display = visibility;
+                       document.getElementById('bh2').style.display = 'none';
+                    document.getElementById('bh3').style.display = 'none';
+                    document.getElementById('bh4').style.display = 'none';
+                    document.getElementById('bh5').style.display = 'none';
+                    document.getElementById('contactD2').style.display = 'none';
+                     document.getElementById('contactD3').style.display = 'none';
+                     document.getElementById('contactD4').style.display = 'none';
+                     document.getElementById('contactD5').style.display = 'none';
+                    break;
+                case 'contactD2':
+                    document.getElementById(id).style.display = visibility;
+                    document.getElementById(c).style.display = visibility;
+                    document.getElementById('bh1').style.display = 'none';
+                    document.getElementById('bh3').style.display = 'none';
+                    document.getElementById('bh4').style.display = 'none';
+                    document.getElementById('bh5').style.display = 'none';
+                    document.getElementById('contactD1').style.display = 'none';
+                    document.getElementById('contactD3').style.display = 'none';
+                    document.getElementById('contactD4').style.display = 'none';
+                    document.getElementById('contactD5').style.display = 'none';
+                    break;
+                case 'contactD3':
+                    document.getElementById(id).style.display = visibility;
+                    document.getElementById(c).style.display = visibility;
+                    document.getElementById('bh1').style.display = 'none';
+                    document.getElementById('bh2').style.display = 'none';
+                    document.getElementById('bh4').style.display = 'none';
+                    document.getElementById('bh5').style.display = 'none';
+                    document.getElementById('contactD2').style.display = 'none';
+                    document.getElementById('contactD1').style.display ='none';
+                    document.getElementById('contactD4').style.display = 'none';
+                    document.getElementById('contactD5').style.display = 'none';
+                    break;
+                case 'contactD4':
+                    document.getElementById(id).style.display = visibility;
+                    document.getElementById(c).style.display = visibility;
+                    document.getElementById('bh1').style.display = 'none';
+                    document.getElementById('bh3').style.display = 'none';
+                    document.getElementById('bh2').style.display = 'none';
+                    document.getElementById('bh5').style.display = 'none';
+                    document.getElementById('contactD2').style.display = 'none';
+                    document.getElementById('contactD3').style.display = 'none';
+                    document.getElementById('contactD1').style.display = 'none';
+                    document.getElementById('contactD5').style.display = 'none';
+                    break;
+                case 'contactD5':
+                    document.getElementById(id).style.display = visibility;
+                    document.getElementById(c).style.display = visibility;
+                    document.getElementById('bh1').style.display = 'none';
+                    document.getElementById('bh3').style.display = 'none';
+                    document.getElementById('bh4').style.display = 'none';
+                    document.getElementById('bh2').style.display = 'none';
+                    document.getElementById('contactD2').style.display = 'none';
+                    document.getElementById('contactD3').style.display = 'none';
+                    document.getElementById('contactD4').style.display = 'none';
+                    document.getElementById('contactD1').style.display = 'none';
+                    break;
+            }
+
+        }
+    </script>
+    <style>
+        body{ width:100%;height:100%;}
+        .bodyHeader{width: 100%;height: 120px;background-color: darkcyan;position: absolute;}
+        .bodyFooter{ width:100%;height: 642px;background-color: beige;}
+
+        .mainBox{width:95%;height:600px;background-color:whitesmoke;z-index:1;margin-left:35px;margin-top:20px;margin-right:45px;margin-bottom:20px;
+            box-shadow: 1px 1px 20px 1px black;  }
+
+        .contactPart{width:29.9%;height:100%;background-color:lightcyan;border-width:1px;border-right-color: lightslategrey;border-right-style: solid;float:left;}
+        .ProfileSection{width:99.9%;height:10%;}
+
+        .profilePic{width:24%;height:100%;background-color:whitesmoke;float:left;}
+        .profileName{width:48%;height:100%;background-color:whitesmoke;float:left;}
+        .profileNewChat{width:14%;height:100%;background-color:whitesmoke;float:left;background-image: url('2015-12-02-nova-icons-sample.png');
+            background-repeat: no-repeat;}
+        .profileNewChat{ height: 100%;
+            background-position: -253px -440px;;}
+
+
+        .profileMenu{width:14%;height:100%;background-color:hotpink;float:left;background-image: url('menuicon.png');
+            background-repeat: no-repeat;}
+
+        .profileMenu{ height: 100%;
+            background-position: -5px -5px;}
+        .contactList{width:99.9%;height:89.9%;background-color:floralwhite;}
+
+        #StyleScroll::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;}
+
+        #StyleScroll::-webkit-scrollbar{width: 7px;background-color: #F5F5F5;border-radius: 5px;}
+
+        #StyleScroll::-webkit-scrollbar-thumb{border-radius: 20px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: rgba(65, 87, 106, 0.97);}
+
+
+
+
+        .bodySection{ width:70%;height:99.9%;background-color:#FFD5EF;float:right;}
+          .bh{
+              width:99.9%;height:9.9%;background-color:lightgreen;
+
+             }
+
+
+        #bh1,#bh2,#bh3,#bh4,#bh5{
+            width:99%;height:99%;background-color:red; display: none;
+        }
+        .cantact{ width:100%;height: 100%;background-color:whitesmoke;float:left;overflow-y: scroll;}
+
+        #contact1,#contact2,#contact3,#contact4,#contact5{ width:95.8%;height: 10%;
+        ;border-top: solid;border-top-width: 1px;border-top-color:lightgrey;
+            padding-left:13px;padding-top:17px;}
+
+        .contactHighlight:hover{background-color:lightgrey;}
+
+        .headerChatImage{width:10%;height: 100%;background-color:papayawhip;float: left;
+        }
+        .headerChatName{width:76%;height: 100%;background-color:papayawhip;float: left}
+        .headerChatAttach{width:7%;height: 100%;background-color: papayawhip;float: left;}
+        .headerChatMenu{width:7%;height: 100%;background-color: papayawhip;float: left}
+
+        .bodyPart{ width:99.9%; height: 89.9%;background-color: wheat;float:left;margin:0.5px;}
+
+        #contactD1,#contactD2,#contactD3,#contactD4,#contactD5{
+            width:96.8%;height: 95.3%;
+            background-color: rgba(38, 111, 255, 0.12);
+            display: none;
+            padding: 15px 5px 5px 25px;
+
+
+        }
+
+        .contactDName{width:99.9%;height: 20%;}
+        .contactDMsg{width:99.9%;height: 69.8%;}
+
+
+
+        .contactDMsgInput{width:99.9%;height: 6%;}
+        .CDMIMic{ width: 2.5%;height: 100%;float:left;}
+        .CDMIBody{ width:94.9%;height: 100%;float:left;}
+        .CDMIBTextbox{width: 99.9%;height: 60%;float:left;border-radius: 10px;}
+        .CDMISmiley{width:2.5%;height: 100%;background-color: cadetblue;float:left;
+            background: url('icons.png') no-repeat -201px -301px;
+            width: 18px;
+            height: 18px;margin:1px 0px 0px 4px;
+        }
+		
+	   .show1{width:50%;height:50%; float :right;display:block;top: 178px;position: relative;right: -70px; }
+       .hide1,.hide2,.hide3,.hide4,.hide5{width:50%;height:50%; float :right;display:none;top: 178px; position: relative;right: -70px;}
+        .normsprite{width: 315px; height: 180px;}
+        .bigsprite{width: 700px;  height: 600px;}
+
+    </style>
+
+</head>
+<!-- body section -->
+<body style="margin-top: 0px;margin-right: 0px;margin-bottom: 0px;margin-left: 0px;">
+
+<!-- background header part-->
+<div class="bodyHeader">
+
+    <!-- main box-->
+    <div class="mainBox ">
+        <div class="contactPart">
+
+            <div class="ProfileSection">
+                <div class="profilePic">
+                    <img src="profilepic.jpg" width="67" height="55"  style="border-radius: 50%; margin-left: 10px;margin-top: 3px;"/>
+
+                </div>
+                <div class="profileName">
+
+                </div>
+                <div class="profileNewChat">
+
+                </div>
+                <div class="profileMenu">
+
+                </div>
+                <!--
+                     after click size should b
+                     <div style="width:99.9%;height:16.6%;background-color:#FFD5D0;">
+
+          </div> -->
+
+            </div>
+            <div class="contactList" >
+
+                <div class="cantact" id="StyleScroll">
+                    <div id="contact1" class="contactHighlight" onclick="setVisibility('contactD1', 'block','bh1');">Naveena</div>
+                    <div id="contact2" class="contactHighlight" onclick="setVisibility('contactD2', 'block','bh2');">Pavani</div>
+                   <div id="contact3" class="contactHighlight" onclick="setVisibility('contactD3', 'block','bh3');"> Shravani</div>
+                    <div id="contact4" class="contactHighlight" onclick="setVisibility('contactD4', 'block','bh4');">Kalyani</div>
+                    <div id="contact5" class="contactHighlight" onclick="setVisibility('contactD5', 'block','bh5');">Srujani</div>
+                   <div id="contact1" class="contactHighlight" onclick="setVisibility('contactD1', 'block');">Naveena</div>
+                    <div id="contact2"  class="contactHighlight" onclick="setVisibility('contactD2', 'block');">Pavani</div>
+                    <div id="contact3"  class="contactHighlight" onclick="setVisibility('contactD3', 'block');"> Shravani</div>
+                    <div id="contact4"  class="contactHighlight" onclick="setVisibility('contactD4', 'block');">Kalyani</div>
+                    <div id="contact5"  class="contactHighlight" onclick="setVisibility('contactD5', 'block');">Srujani</div>
+                    <div id="contact1"  class="contactHighlight" onclick="setVisibility('contactD1', 'block');">Naveena</div>
+                    <div id="contact2" class="contactHighlight" onclick="setVisibility('contactD2', 'block');">Pavani</div>
+                    <div id="contact3" class="contactHighlight" onclick="setVisibility('contactD3', 'block');"> Shravani</div>
+                     <div id="contact5" class="contactHighlight" onclick="setVisibility('contactD5', 'block');">Srujani</div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="bodySection">
+		<div class="bh">
+            <div id="bh1">
+                <div class="headerChatImage">
+                    <img src="profilepic.jpg" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;"/>
+                </div>
+                <div class="headerChatName"><h3>Naveena </h3>
+
+                </div>
+                <div class="headerChatAttach">
+                    <img src="attach.png" width="40" height="40"  style=" margin-left:10px;margin-top:10px;"/>
+                </div>
+                <div class="headerChatMenu">
+                    <img src="menu.png" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;" />
+                </div>
+			</div>
+                <div id="bh2">
+                    <div class="headerChatImage">
+                        <img src="profilepic.jpg" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;"/>
+                    </div>
+                    <div class="headerChatName"><h3>pavani </h3>
+
+                    </div>
+                    <div class="headerChatAttach">
+                        <img src="attach.png" width="40" height="40"  style=" margin-left:10px;margin-top:10px;"/>
+                    </div>
+                    <div class="headerChatMenu">
+                        <img src="menu.png" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;" />
+                    </div>
+					</div>
+            <div id="bh3">
+                <div class="headerChatImage">
+                    <img src="profilepic.jpg" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;"/>
+                </div>
+                <div class="headerChatName"><h3>sravani </h3>
+
+                </div>
+                <div class="headerChatAttach">
+                    <img src="attach.png" width="40" height="40"  style=" margin-left:10px;margin-top:10px;"/>
+                </div>
+                <div class="headerChatMenu">
+                    <img src="menu.png" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;" />
+                </div>
+            </div>
+            <div id="bh4">
+                <div class="headerChatImage">
+                    <img src="profilepic.jpg" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;"/>
+                </div>
+                <div class="headerChatName"><h3>kalyani </h3>
+
+                </div>
+                <div class="headerChatAttach">
+                    <img src="attach.png" width="40" height="40"  style=" margin-left:10px;margin-top:10px;"/>
+                </div>
+                <div class="headerChatMenu">
+                    <img src="menu.png" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;" />
+                </div>
+            </div>
+            <div id="bh5">
+                <div class="headerChatImage">
+                    <img src="profilepic.jpg" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;"/>
+                </div>
+                <div class="headerChatName"><h3>srujani</h3>
+
+                </div>
+                <div class="headerChatAttach">
+                    <img src="attach.png" width="40" height="40"  style=" margin-left:10px;margin-top:10px;"/>
+                </div>
+                <div class="headerChatMenu">
+                    <img src="menu.png" width="50" height="50"  style="border-radius: 50%; margin-left: 10px;margin-top: 5px;" />
+                </div>
+            </div>
+          </div>
+
+
+            <div class="bodyPart">
+                <div id="contactD1">
+                    <div class="contactDName"> Naveena Chokkara </div>
+                      <div class="contactDMsg"> Naveena Chokkara Details
+                        <div id="smileySprite1" class="hide1" > <img id="normsprite" class="normsprite" src="sprit.jpg" onclick="bs()" /></div>
+                      </div>
+                    <div class="contactDMsgInput">
+                        <div class="CDMIMic"  title="Record">
+                            <a href="#">
+                                <img src="mic.jpg" width="10" height="17"  style="margin-left: 10px;margin-top: 5px;"/>
+
+                            </a>
+                        </div>
+                        <div class="CDMIBody"><input type="text" class="CDMIBTextbox"></div>
+                        <div class="CDMISmiley" onclick="f1('smileySprite1')">
+                           
+                        </div>
+                    </div>
+
+                </div>
+                <div id="contactD2" >
+                    <div class="contactDName"> Pavani kota </div>
+                    <div class="contactDMsg"> Pavani Details
+					<div id="smileySprite2" class="hide2" > <img   src="sprit.jpg" style="width: 315px; height: 180px;" /> </div>
+                    </div>
+
+                    <div class="contactDMsgInput">
+                        <div class="CDMIMic">
+                            <a href="#">
+                                <img src="mic.jpg" width="10" height="17"  style="margin-left: 10px;margin-top: 5px;"/>
+                            </a>
+                        </div>
+                        <div class="CDMIBody"><input type="text" class="CDMIBTextbox"></div>
+                        <div class="CDMISmiley" onclick="f1('smileySprite2')">
+                           
+                        </div>
+                    </div>
+
+                </div>
+                <div id="contactD3" >
+                    <div class="contactDName"> shravani Details</div>
+                    <div class="contactDMsg">  Details
+					<div id="smileySprite3" class="hide3" > <img   src="sprit.jpg" style="width: 315px; height: 180px;" /> </div>
+                    </div>
+
+                    <div class="contactDMsgInput">
+                        <div class="CDMIMic">
+                            <a href="#">
+                                <img src="mic.jpg" width="10" height="17"  style="margin-left: 10px;margin-top: 5px;"/>
+                            </a>
+                        </div>
+                        <div class="CDMIBody"><input type="text" class="CDMIBTextbox"></div>
+                        <div class="CDMISmiley" onclick="f1('smileySprite3')">
+                           
+                        </div>
+                    </div>
+                </div>
+                <div id="contactD4" >
+                    <div class="contactDName"> kalyani Details</div>
+                    <div class="contactDMsg"> kalyani  Details
+					<div id="smileySprite4" class="hide4" > <img   src="sprit.jpg" style="width: 315px; height: 180px;" /> </div>
+                    </div>
+
+                    <div class="contactDMsgInput">
+                        <div class="CDMIMic">
+                            <a href="#">
+                                <img src="mic.jpg" width="10" height="17"  style="margin-left: 10px;margin-top: 5px;"/>
+                            </a>
+                        </div>
+                        <div class="CDMIBody"><input type="text" class="CDMIBTextbox"> </div>
+                        <div class="CDMISmiley" onclick="f1('smileySprite4')">
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div id="contactD5" >
+                    <div class="contactDName"> srujani Details</div>
+                    <div class="contactDMsg"> srujani Details
+					<div id="smileySprite5" class="hide5" > <img   src="sprit.jpg" style="width: 315px; height: 180px;" /> </div>
+                    </div>
+
+                    <div class="contactDMsgInput">
+                        <div class="CDMIMic" >
+                            <a href="#">
+                                <img src="mic.jpg" width="10" height="17"  style="margin-left: 10px;margin-top: 5px;"/>
+                            </a>
+                        </div>
+                        <div class="CDMIBody"><input type="text" class="CDMIBTextbox"></div>
+                        <div class="CDMISmiley" onclick="f1('smileySprite5')">
+                           
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="bodyFooter">
+</div>
+
+</body>
+</html>
